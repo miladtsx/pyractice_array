@@ -108,10 +108,7 @@ def distinct_words(input_list: list[str]):
     """
 
     result = iterating_through_input(input_list)
-
     print(result)
-    print("Hello Ali")
-    pass
 
 
 def main():
