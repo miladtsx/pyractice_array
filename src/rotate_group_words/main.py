@@ -15,24 +15,9 @@ def group_words(key: str, value: list[str]):
     pass
 
 
-def is_similar(source_word: str, other_word: str) -> bool:
-    """
-    # get the length of the other_word
-        # rotate all possible forms (right to left)
-            #iterate through the lenght of the word and rotate_word()
-         # compare each rotation with the source
-         # if they match return True
-         # else return False
-    """
-
-    is_similar = False
-    for i in range(len(other_word)):
-        new_form = rotate_word(other_word, i)
-        is_similar = new_form == source_word
-        if is_similar:
-            break
-
-    return is_similar
+def is_similar(a: str, b: str) -> bool:
+    """Check if b is a rotation of a"""
+    return len(a) == len(b) and b in (a + a)
 
 
 def rotate_word(word: str, count_of_rotation: int) -> str:
