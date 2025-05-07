@@ -98,7 +98,7 @@ def distinct_words(input_list: list[str]):
     """
 
     result = iterating_through_input(input_list)
-    print(result)
+    pretty_print(result)
 
 
 def main():
@@ -131,4 +131,6 @@ def main():
     distinct_words(["abcd", "cdab", "dabc", "bcda", "efgh", "ghfe"])
 
 
-main()
+def pretty_print(groups: list[list[str]]):
+    for k, v in groups.items():
+        print(f"{k}: [{', '.join(v)}]")
