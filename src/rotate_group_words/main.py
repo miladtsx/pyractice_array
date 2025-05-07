@@ -53,6 +53,7 @@ def iterating_through_input(words: list[str]) -> Any:
     #TODO remove duplicates
     """
     result_dic = {}
+    visited = set()
     for w in words:
         # instead of adding every possible words, only add those who do not have
         # a key in dictionary
@@ -60,10 +61,14 @@ def iterating_through_input(words: list[str]) -> Any:
         # for k in result_dic.keys():
         #     if result_dic[k] == w:
         #         break
+        if w in visited:
+            continue
         result_dic[w] = []
+        visited.add(w)
         for other_word in words:
             if is_similar(w, other_word):
                 result_dic[w].append(other_word)
+                visited.add(other_word)
                 # words.remove(other_word)
     return result_dic
 
