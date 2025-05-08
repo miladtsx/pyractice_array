@@ -49,8 +49,6 @@ def iterating_through_input(words: list[str]) -> Any:
     """
     how to iterate and compare all elements
     # iterate through them all
-    #TODO LATER do it efficiently current efficiency is O(n^2)
-    #TODO remove duplicates
     """
     result_dic = {}
     visited = set()
@@ -73,7 +71,7 @@ def iterating_through_input(words: list[str]) -> Any:
     return result_dic
 
 
-def distinct_words(input_list: list[str]):
+def rotate_group_words(input_list: list[str]):
     """
         Find the distinct words and group similar ones
 
@@ -128,7 +126,7 @@ def main():
            rotate fourth string bcda by one position to right --> bcda --> abcd
 
     """
-    distinct_words(["abcd", "cdab", "dabc", "bcda", "efgh", "ghfe"])
+    rotate_group_words(["abcd", "cdab", "dabc", "bcda", "efgh", "ghfe"])
 
 
 def pretty_print(groups: list[list[str]]):
