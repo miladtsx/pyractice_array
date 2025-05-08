@@ -1,6 +1,6 @@
 [project]
 name = "rotate_group_words"
-version = "0.4.5"
+version = "0.4.6"
 description = ""
 authors = [
     {name = "TSX",email = "miladtsx@gmail.com"}
