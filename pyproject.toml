@@ -14,6 +14,10 @@ dependencies = [
 pytest = "^8.0"
 pytest-cov = "^6.1.1"
 
+[project.urls]
+Homepage = "https://github.com/miladtsx/pyractice_array"
+Issues = "https://github.com/miladtsx/pyractice_array/issues"
+
 [tool.poetry]
 packages = [{include = "rotate_group_words", from = "src"}]
 
