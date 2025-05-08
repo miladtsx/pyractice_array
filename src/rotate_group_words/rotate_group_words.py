@@ -21,6 +21,7 @@ def rotate_word(word: str, count_of_rotation: int) -> str:
 
 
 def rotate_word_once(word: str) -> str:
+    if len(word) == 0 or len(word) == 1: return word
     the_last_word = word[-1]
     return the_last_word + word[:-1]
 
