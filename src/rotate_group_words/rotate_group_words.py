@@ -1,20 +1,6 @@
 from typing import Any
 
 
-def group_words(key: str, value: list[str]):
-    """
-    it keeps a dictionary of
-    {
-        "abcd" : ["abcd", "cdab", "dabc", "bcda"],
-        "efgh": []
-        "ghfe" : []
-    }
-
-    """
-    # use a dictionary to keep the similar items
-    pass
-
-
 def is_similar(a: str, b: str) -> bool:
     """Check if b is a rotation of a"""
     return len(a) == len(b) and b in (a + a)
@@ -38,11 +24,6 @@ def rotate_word_once(word: str) -> str:
     the_last_word = word[-1]
     return the_last_word + word[:-1]
 
-
-def is_distrinct(word: str, list_of_words: list[str]):
-
-    is_similar = is_similar(word, list_of_words)
-    pass
 
 
 def iterating_through_input(words: list[str]) -> Any:
@@ -97,36 +78,6 @@ def rotate_group_words(input_list: list[str]):
 
     result = iterating_through_input(input_list)
     pretty_print(result)
-
-
-def main():
-    """
-    Given a list of Strings,
-       group the strings together
-           which forms the exact same word after rotation
-                   (keeping the character sequence intact while rotating).
-
-    Example:
-    "abcd", "cdab", "dabc", "bcda", "efgh", "ghfe"
-
-       Output:
-           All of the above string can be grouped together.?
-           In case of 'efgh' and 'ghfe' you cannot group even after rotation
-               because the sequence of the character is different in both the string.
-
-           final output : {
-           ["abcd", "cdab", "dabc", "bcda"],
-           ["efgh"],
-           ["ghfe"]
-           }
-
-       how it works:
-           rotate second String 'cdab' by two positions to right -->  cdab-->  bcda --> abcd
-           rotate thrid string dabc by three position to right --> dabc--> cdab --> bcda --> abcd
-           rotate fourth string bcda by one position to right --> bcda --> abcd
-
-    """
-    rotate_group_words(["abcd", "cdab", "dabc", "bcda", "efgh", "ghfe"])
 
 
 def pretty_print(groups: list[list[str]]):
